@@ -1,9 +1,9 @@
-body{
+body {
     background: whitesmoke;
     color: rgb(32, 31, 33);
 }
 
-h2{
+h2 {
     width: 250px;
     line-height: 5px;
     border: 10px double red;
@@ -12,56 +12,56 @@ h2{
 
 /* link relate */
 
-a{
+a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: green;
 }
 
-a:visited{
+a:visited {
     color: rgb(32, 31, 33);
 }
 
-a:link{
+a:link {
     color: blue;
 }
 
 /* page top section */
 
-.logo-text{
+.logo-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     color: white;
 }
 
-.page-top{
+.page-top {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(168,208,230);
+    background-color: rgb(168, 208, 230);
 }
 
-.top-left{
+.top-left {
     display: flex;
     align-items: center;
     flex-shrink: 1;
 }
 
-.top-menu{
+.top-menu {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.top-menu:hover{
+.top-menu:hover {
     background-color: rgb(44, 158, 74);
     border-radius: 10px;
 }
 
-.top-middle{
+.top-middle {
     width: 70%;
     display: flex;
     align-items: center;
@@ -69,39 +69,40 @@ a:link{
     flex-shrink: 2;
 }
 
-.top-right{
+.top-right {
     display: flex;
     align-items: center;
     flex-shrink: 1;
 }
 
 /* image style relate */
-.page-logo{
+.page-logo {
     width: 64px;
 }
 
-.genshin-logo{
+.genshin-logo {
     width: 32px;
 }
 
-img{
+img {
     width: 150px;
 }
 
 /* middle content */
 
-p{
+p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.page-main-middle{
+.page-main-middle {
     color: white;
     width: 55%;
     margin: 0 auto;
-    background-color: rgb(168,208,230);
+    background-color: rgb(168, 208, 230);
+    padding: 10px;
 }
 
-.five-star-characters{
+.five-star-characters {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -110,7 +111,7 @@ p{
     justify-content: space-around;
 }
 
-.four-star-characters{
+.four-star-characters {
     display: flex;
     align-items: center;
     flex-shrink: 1;
