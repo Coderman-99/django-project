@@ -1,4 +1,4 @@
-django-admin create django-project
+django-admin startproject django-project
 cd django-project
-python manage.py startapp django-project
+django-admin startapp django-project
 python manage.py runserver
