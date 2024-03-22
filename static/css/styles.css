@@ -1,0 +1,120 @@
+body{
+    background: whitesmoke;
+    color: rgb(32, 31, 33);
+}
+
+h2{
+    width: 250px;
+    line-height: 5px;
+    border: 10px double red;
+    text-align: center;
+}
+
+/* link relate */
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
+
+a:visited{
+    color: rgb(32, 31, 33);
+}
+
+a:link{
+    color: blue;
+}
+
+/* page top section */
+
+.logo-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    color: white;
+}
+
+.page-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(168,208,230);
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.top-menu{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.top-menu:hover{
+    background-color: rgb(44, 158, 74);
+    border-radius: 10px;
+}
+
+.top-middle{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 2;
+}
+
+.top-right{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+/* image style relate */
+.page-logo{
+    width: 64px;
+}
+
+.genshin-logo{
+    width: 32px;
+}
+
+img{
+    width: 150px;
+}
+
+/* middle content */
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.page-main-middle{
+    color: white;
+    width: 55%;
+    margin: 0 auto;
+    background-color: rgb(168,208,230);
+}
+
+.five-star-characters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.four-star-characters{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}

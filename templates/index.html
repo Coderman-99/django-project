@@ -1,0 +1,124 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="prum munirak">
+    <meta name="about" content="my website">
+    <title>MunirakGenshin</title>
+    <link rel="icon" href="../../static/image/nilou.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '../static/css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="page-top">
+            <!--top left: Page trademark name, and search bar-->
+            <a href="#">
+                <div class="top-left">
+                    <img src="../static/image/page-logo/page-logo.png" alt="" class="page-logo">
+                    <span class="logo-text">GamingPedia</span>
+                </div>
+            </a>
+            <!--Middle section-->
+            <div class="top-middle">
+                <div class="top-menu">
+                    <p>Characters</p>
+                </div>
+                <div class="top-menu">
+                    <p>Equipment</p>
+                </div>
+                <div class="top-menu">
+                    <p>Artifact</p>
+                </div>
+                <div class="top-menu">
+                    <p>Popular Team Comp</p>
+                </div>
+                <div class="top-menu">
+                    <p>Character Ranking</p>
+                </div>
+            </div>
+            <!--Top right: game title -->
+            <!-- <div class="top-right"> -->
+            <div class="top-right">
+                <p>Games</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-main">
+            <!-- left ads -->
+            <div class="right-ads"></div>
+            <div class="middle_left-content" style="text-align: left">
+                <form method="get" action="/">
+                    <label for="sort">Filter by</label><br>
+                    <label for="by_name">By name:</label>
+                    <select name="by_name" id="by_name">
+                        <option value="by_name_asc">Ascending(Default)</option>
+                        <option value="by_name_des">Descending</option>
+                    </select><br>
+                    <label for="by_ele">By element:</label>
+                    <select name="by_ele" id="by_ele">
+                        <option value="default">None</option>
+                        <option value="by_anemo">Anemo</option>
+                        <option value="by_pyro">Pyro</option>
+                        <option value="by_cryo">Cryo</option>
+                        <option value="by_hydro">Hydro</option>
+                        <option value="by_electro">Electro</option>
+                        <option value="by_geo">Geo</option>
+                        <option value="by_dendro">Dendro</option>
+                    </select>
+                    <input type="submit" value="Filter">
+                </form>
+            </div>
+            <!-- middle main content -->
+            <div class="page-main-middle">
+                <h2>5-Star characters:</h2>
+                <br>
+                <div class="five-star-characters">
+                    {% for character in characters %}
+                    <div style="text-align: center;">
+                        <a href="{% url 'character' character.id %}">
+                            <img src="../static/image/character-cards/{{character.f_name}}_character_card.png"
+                                alt="{{character.f_name}}">
+                        </a>
+                        <p
+                            style="background-color: RGB(138, 86, 187); border-radius: 25px; text-transform: capitalize;">
+                            {{character.name}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- right ads -->
+                <!-- <div class="right-ads"></div> -->
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="page-footer">
+            <p>Contect Me</p>
+            <p>
+                <a href="https://web.facebook.com/gokuvegita.vegita/">Facebook</a>
+            </p>
+            <p>Discord: oramuda#2790</p>
+            <p>
+                <a href="https://www.google.com">Instagram</a>
+            </p>
+            <p>
+                <a href="https://www.google.com">Reddit</a>
+            </p>
+            <p>
+                <a href="https://www.google.com">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

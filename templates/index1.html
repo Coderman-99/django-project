@@ -1,0 +1,19 @@
+{%load static%}
+<link rel="stylesheet" , href="{% static 'style.css' %}">
+<h1>
+    hey input your text here <br>
+    This the test for model django:<br>
+
+    {% for feature in features%}
+    ID: {{feature.id}}<br>
+    Service name: {{feature.service_name}}<br>
+    Details: {{feature.details}}<br>
+    {% endfor %}
+
+</h1>
+
+<!-- <form method="post" , action="counter">
+    {% csrf_token %}
+    <textarea name='text' , rows="25" , cols="100"></textarea>
+    <input type="submit">
+</form> -->

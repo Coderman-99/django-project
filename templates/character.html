@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+{%load static%}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="prum munirak">
+    <meta name="about" content="my website">
+    <title>MunirakGenshin</title>
+    <link rel="icon" href="../../../static/image/nilou.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/css/character.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="page-top">
+            <!--top left: Page trademark name, and search bar-->
+            <a href="../../html/main.html">
+                <div class="top-left">
+                    <img src="../../../static/image/page-logo/page-logo.png" alt="" class="page-logo">
+                    <span class="logo-text">GamingPedia</span>
+                </div>
+            </a>
+            <!--Middle section-->
+            <div class="top-middle">
+                <div class="top-menu">
+                    <a href="../../html/character.html">
+                        <p>Characters</p>
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <a href="../../html/equipment.html">
+                        <p>Equipment</p>
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <a href="../../html/artifact.html">
+                        <p>Artifact</p>
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <a href="../../html/pop-team-com.html">
+                        <p>Popular Team Comp</p>
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <a href="../../html/char-ranking.html">
+                        <p>Character Ranking</p>
+                    </a>
+                </div>
+            </div>
+            <!--Top right: game title -->
+            <!-- <div class="top-right"> -->
+            <div class="top-right">
+                <p>Games</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-main">
+            <!-- left ads -->
+            <!-- <div class="left-ads"></div> -->
+            <!-- middle main content -->
+            <div class="page-main-middle">
+                <div class="page-main-middle-top">
+                    <img src="../../../static/image/character-cards/{{pk.f_name}}_character_card.png"
+                        alt="{{pk.f_name}}">
+                    <span
+                        style="font-size: larger;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-decoration: solid; text-align: center;">{{ph.name}}</span>
+                </div>
+                <div>
+                    <h2>Base stats (Max level and Acension)</h2>
+                    <p>HP: {{pk.hp}}</p>
+                    <p>ATK: {{pk.atk}}</p>
+                    <p>DEF: {{pk.df}}</p>
+                    <p>Special Bonus Stat: Geo </p>
+                </div>
+                <div class="page-main-middle-bottom">
+                    <div class="level-ascension-materials">
+                        <h2>Ascension Materials</h2>
+                        <h3>0 &#8594;1</h3>
+                        <div class="items-flex">
+                            <div class="item-flex">
+                                <p>20,000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>1 {{mat.boss_mat}}</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_{{pk.boss_mat}}.webp"
+                                        alt="{{pk.boss_mat}}" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>3 {{pk.asc_mat1}}</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp"
+                                        alt="{{pk.asc_mat1}}" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>3 {{pk.asc_mat2}}</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Divining_Scroll.webp"
+                                        alt="{{pk.asc_mat2}}" class="items">
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3>1 &#8594;2</h3>
+                        <div class="item-flex">
+                            <p>40,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>3 Prithiva Topaz Fragment</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Fragment.webp"
+                                    alt="Prithiva Topaz Fragment" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>3 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>15 {{pk.asc_mat2}}</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Divining_Scroll.webp"
+                                    alt="{{pk.asc_mat2}}" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>12 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+
+                        <h3>2 &#8594;3</h3>
+                        <div class="item-flex">
+                            <p>60,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>6 Prithiva Topaz Fragment</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Fragment.webp"
+                                    alt="Prithiva Topaz Fragment" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>20 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>12 Sealed Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                    alt="Sealed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>4 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+
+                        <h3>3 &#8594;4</h3>
+                        <div class="item-flex">
+                            <p>80,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>3 Prithiva Topaz Chunk</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Chunk.webp"
+                                    alt="Prithiva Topaz Chunk" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>30 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>18 Sealed Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                    alt="Sealed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>8 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+
+                        <h3>4 &#8594;5</h3>
+                        <div class="item-flex">
+                            <p>100,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>6 Prithiva Topaz Chunk</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Chunk.webp"
+                                    alt="Prithiva Topaz Chunk" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>45 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>12 Forbidden Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                    alt="forbidden Cursed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>12 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+
+                        <h3>5 &#8594;6</h3>
+                        <div class="item-flex">
+                            <p>120,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>6 Prithiva Topaz Gemstone</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Gemstone.webp"
+                                    alt="Prithiva Topaz Gemstone" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>60 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>24 Forbidden Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                    alt="Forbidden Cursed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>20 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+
+                        <h3>Total</h3>
+                        <div class="item-flex">
+                            <p>420,000 Mora</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>1 Prithiva Topaz Silver</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Sliver.webp"
+                                    alt="Prithiva Topaz Silver" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>9 Prithiva Topaz Fragment</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Fragment.webp"
+                                    alt="Prithiva Topaz Fragment" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>9 Prithiva Topaz Chunk</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Chunk.webp"
+                                    alt="Prithiva Topaz Chunk" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>6 Prithiva Topaz Gemstone</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Prithiva_Topaz_Gemstone.webp"
+                                    alt="Prithiva Topaz Gemstone" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>168 Cecilia</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/plant/Item_Cecilia.webp" alt="Cecilia"
+                                    class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>18 {{pk.asc_mat2}}</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Divining_Scroll.webp"
+                                    alt="{{pk.asc_mat2}}" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>30 Sealed Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                    alt="Sealed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>36 Forbidden Cursed Scroll</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                    alt="Forbidden Cursed Scroll" class="items">
+                            </span>
+                        </div>
+                        <div class="item-flex">
+                            <p>48 Basalt Pillar</p>
+                            <span>
+                                <img src="../../../static/image/genshin-items/boss-drop/Item_Basalt_Pillar.webp"
+                                    alt="Basalt Pillar" class="items">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="talent-ascension-materials">
+                        <h2>Talent Ascension Material</h2>
+                        <h3>1 &#8594;2</h3>
+                        <div class="items-flex">
+                            <div class="item-flex">
+                                <p>12,500 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Divning Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Divining_Scroll.webp"
+                                        alt="Item_Divining_Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>3 Teaching of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Teachings_of_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+
+                            <h3>2 &#8594;3</h3>
+                            <div class="item-flex">
+                                <p>17,500 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>3 Sealed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                        alt="Sealed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>2 Guide to Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Guide_to_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+
+                            <h3>3 &#8594;4</h3>
+                            <div class="item-flex">
+                                <p>25,000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>4 Sealed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                        alt="Sealed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>4 Guide to Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Guide_to_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+
+                            <h3>4 &#8594;5</h3>
+                            <div class="item-flex">
+                                <p>30000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Sealed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                        alt="Sealed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Guide to Ballad
+                                </p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Guide_to_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+
+                            <h3>5 &#8594;6</h3>
+                            <div class="item-flex">
+                                <p>37,500 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>9 Sealed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                        alt="Sealed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>9 Guide to Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Guide_to_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+
+                            <h3>6 &#8594;7</h3>
+                            <div class="item-flex">
+                                <p>120,000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>4 Forbidden Cursed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                        alt="forbidden Cursed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>4 Philossophies of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Philosophies_of_Ballad.webp"
+                                        alt="Philossophies of Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>1 Tusk of Monoceros Caeli</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_Tusk_of_Monoceros_Caeli.webp"
+                                        alt="Tusk of Monoceros Caeli" class="items">
+                                </span>
+                            </div>
+
+                            <h3>7 &#8594;8</h3>
+                            <div class="item-flex">
+                                <p>260,0000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Forbidden Cursed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                        alt="forbidden Cursed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Philossophies of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Philosophies_of_Ballad.webp"
+                                        alt="Philossophies of Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>1 Tusk of Monoceros Caeli</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_Tusk_of_Monoceros_Caeli.webp"
+                                        alt="Tusk of Monoceros Caeli" class="items">
+                                </span>
+                            </div>
+
+                            <h3>8 &#8594;9</h3>
+                            <div class="item-flex">
+                                <p>450,000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>9 Forbidden Cursed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                        alt="forbidden Cursed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>12 Philossophies of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Philosophies_of_Ballad.webp"
+                                        alt="Philossophies of Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>2 Tusk of Monoceros Caeli</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_Tusk_of_Monoceros_Caeli.webp"
+                                        alt="Tuskof Monoceros Caeli" class="items">
+                                </span>
+                            </div>
+
+                            <h3>9 &#8594;10</h3>
+                            <div class="item-flex">
+                                <p>700,000 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>12 Forbidden Cursed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                        alt="forbidden Cursed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>16 Philossophies of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Philosophies_of_Ballad.webp"
+                                        alt="Philossophiesof of Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>2 Tusk of Monoceros Caeli</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_Tusk_of_Monoceros_Caeli.webp"
+                                        alt="Tuskof Monoceros Caeli" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>1 Crown of Insight</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Crown_of_Insight.webp"
+                                        alt="Crown Of Insight" class="items">
+                                </span>
+                            </div>
+
+                            <h3>Total</h3>
+                            <div class="item-flex">
+                                <p>1,652,500 Mora</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Mora.webp" alt="Mora"
+                                        class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Divning Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Divining_Scroll.webp"
+                                        alt="Item_Divining_Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>22 Sealed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Sealed_Scroll.webp"
+                                        alt="Sealed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>31 Forbidden Cursed Scroll</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/enemy-drop/Item_Forbidden_Curse_Scroll.webp"
+                                        alt="forbidden Cursed Scroll" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>3 Teaching of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Teachings_of_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>21 Guide to Ballad
+                                </p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Guide_to_Ballad.webp"
+                                        alt="Guide to Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>38 Philossophies of Ballad</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/domain-drop/Item_Philosophies_of_Ballad.webp"
+                                        alt="Philossophiesof of Ballad" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>6 Tusk of Monoceros Caeli</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/boss-drop/Item_Tusk_of_Monoceros_Caeli.webp"
+                                        alt="Tuskof Monoceros Caeli" class="items">
+                                </span>
+                            </div>
+                            <div class="item-flex">
+                                <p>1 Crown of Insight</p>
+                                <span>
+                                    <img src="../../../static/image/genshin-items/Item_Crown_of_Insight.webp"
+                                        alt="Crown Of Insight" class="items">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="constellation">
+                    <table>
+                        <tr>
+                            <th colspan="2">constellation</th>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black; background: rgb(192, 192, 192);">C1</td>
+                            <td style=" background: rgb(192, 192, 192);">{{pk.c1}}</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black;">C2</td>
+                            <td>{{pk.c2}}
+                                <!-- <ul>
+                                    <li>Unleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal
+                                        Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by
+                                        Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of
+                                        Albedo's DEF.</li>
+                                    <li>This effect stacks up to 4 times.</li>
+                                </ul> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black; background: rgb(192, 192, 192);">C3</td>
+                            <td style=" background: rgb(192, 192, 192);">{{pk.c3}}</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black;">C4</td>
+                            <td>{{pk.c4}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black; background: rgb(192, 192, 192);">C5</td>
+                            <td style=" background: rgb(192, 192, 192);">{{pk.c5}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 2px solid black;">C6</td>
+                            <td>{{pk.c6}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- right ads -->
+                <!-- <div class="right-ads"></div> -->
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="page-footer">
+            <p>Contect Me</p>
+            <p>
+                <a href="https://web.facebook.com/gokuvegita.vegita/">Facebook</a>
+            </p>
+            <p>Discord: oramuda#2790</p>
+            <p>
+                <a href="https://www.google.com">Instagram</a>
+            </p>
+            <p>
+                <a href="https://www.google.com">Reddit</a>
+            </p>
+            <p>
+                <a href="https://www.google.com">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
